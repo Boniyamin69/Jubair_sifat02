@@ -139,6 +139,52 @@
     .browse-btn:hover {
       background: #cc0000;
     }
+    .tab-box {
+      background: #1a1a1a;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 32px;
+    }
+    .tab-nav {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 16px;
+    }
+    .tab-nav button {
+      background: #333;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .tab-nav button:hover {
+      background: #555;
+    }
+    .tab-nav button.active {
+      background: #ff0000;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .tab-content .info-box {
+      background: #2a2a2a;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-left: 2px solid #ccc;
+      border-radius: 4px;
+    }
+    .tab-content a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    .tab-content a:hover {
+      text-decoration: underline;
+    }
 
     /* Media Queries */
     @media (max-width: 768px) {
@@ -178,6 +224,14 @@
       }
       footer .md:space-x-6 {
         margin-bottom: 16px;
+      }
+      .tab-nav {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .tab-nav button {
+        flex: 1 1 30%;
+        text-align: center;
       }
     }
 
@@ -285,6 +339,73 @@
       </div>
     </div>
 
+    <!-- Tabbed Box Section -->
+    <div class="container mx-auto mt-16">
+      <h2 class="section-title">
+        <span></span>My Profile
+      </h2>
+      <div class="tab-box">
+        <div class="tab-nav">
+          <button class="active" onclick="showTab('experience')">Experience</button>
+          <button onclick="showTab('skills')">Skills</button>
+          <button onclick="showTab('education')">Education</button>
+          <button onclick="showTab('publications')">Publications</button>
+          <button onclick="showTab('awards')">Awards</button>
+          <button onclick="showTab('languages')">Languages</button>
+        </div>
+        <div id="experience" class="tab-content active">
+          <div class="info-box">The Holy Quran Reciter, Zikrullah TV (USA), January 2024 - Present</div>
+          <div class="info-box">Child Islamic Singer, Obiram Shilpigosthi, Bogura, Bangladesh, 2014-2015</div>
+          <div class="info-box">Feature and Content Writer, Youth Organisations Bangladesh, Nov 2018 - Present, Sirajganj, Bangladesh</div>
+          <div class="info-box">Head of Cultural Member, Hikmah Alumni Association, Aug 2019 - Present, Uttara, Dhaka, Bangladesh</div>
+          <div class="info-box">Senior Artist, Oishiswr Shilpigosthi, Jan 2017 - Present, Uttara, Dhaka, Bangladesh</div>
+          <div class="info-box">Creative Nasheed Composer, Tanvir Khan Studio, Jan 2024 - Present, Dhaka, Bangladesh</div>
+          <div class="info-box">Lyricist and Melodist, Holy Tune & Kalarab, 2021 - Present, Paltan, Dhaka, Bangladesh</div>
+          <div class="info-box">Chief Executive & Founding Member, Melodians, Aug 2022 - Sep 2023, Dhaka, Bangladesh</div>
+        </div>
+        <div id="skills" class="tab-content">
+          <div class="info-box">The Holy Quran Recitation</div>
+          <div class="info-box">Islamic Speaking</div>
+          <div class="info-box">Song Tuning</div>
+          <div class="info-box">Islamic Nasheed Writing</div>
+          <div class="info-box">Islamic Nasheed Singing</div>
+          <div class="info-box">Audio Engineering</div>
+          <div class="info-box">Graphic Design</div>
+          <div class="info-box">Cinematography</div>
+          <div class="info-box">Photography</div>
+          <div class="info-box">Video Editing</div>
+        </div>
+        <div id="education" class="tab-content">
+          <div class="info-box">Al Jamiatul Islamia Qasemul Ulum (Jamil Madrasha), Hafeez-e Quran, 2015-2016</div>
+          <div class="info-box">Darunnazat Siddikia Kamil Madrasah, HSC Level, 2021 - 2023, A+, <a href="#">Visit</a></div>
+          <div class="info-box">Muradpur Islamia Fazil Madrasah, SSC Level, 2019 - 2021, 4.83 (Science), <a href="#">Visit</a></div>
+          <div class="info-box">Madrasatul Hikmah Al Islamiah, JDC Level (Arabic Medium School)</div>
+        </div>
+        <div id="publications" class="tab-content">
+          <div class="info-box">★ Kabbomala</div>
+          <div class="info-box">★ Somokaler Dui Banglar Kobita</div>
+          <div class="info-box">★ Diprantik Vabona</div>
+          <div class="info-box">★ Alor Dusha</div>
+          <div class="info-box">★ Converted Ramesh</div>
+          <div class="info-box">★ Alokito Jibon</div>
+          <div class="info-box">★ Srijone Priojon</div>
+        </div>
+        <div id="awards" class="tab-content">
+          <div class="info-box">1st Champion, Quraner Alo Power by Priojon Multimedia, Finalist 2022</div>
+          <div class="info-box">1st Runner-Up, Hand Writing, Sheikh Rasel Annual Competition, Issued: Dec 2012</div>
+          <div class="info-box">2nd Runner-Up, Islamic Nasheed, Sheikh Rasel Annual Competition, Issued: Dec 2012</div>
+          <div class="info-box">Award of Renesa, Darunnazat Siddikia Kamil Madrasah (Powered by Chatro Hijbullah), 2023</div>
+          <div class="info-box">Best Singer Award, Madrasatul Hikmah Al Islamiah, Issued: Feb 2021</div>
+        </div>
+        <div id="languages" class="tab-content">
+          <div class="info-box">★ Bangla</div>
+          <div class="info-box">★ English</div>
+          <div class="info-box">★ Arabic</div>
+          <div class="info-box">★ Urdu</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer Section -->
     <footer>
       <div class="container mx-auto">
@@ -331,12 +452,69 @@
   </div>
 
   <script type="text/javascript">
+    var gk_isXlsx = false;
+    var gk_xlsxFileLookup = {};
+    var gk_fileData = {};
+    function filledCell(cell) {
+      return cell !== '' && cell != null;
+    }
+    function loadFileData(filename) {
+      if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+          try {
+              var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+              var firstSheetName = workbook.SheetNames[0];
+              var worksheet = workbook.Sheets[firstSheetName];
+
+              // Convert sheet to JSON to filter blank rows
+              var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+              // Filter out blank rows (rows where all cells are empty, null, or undefined)
+              var filteredData = jsonData.filter(row => row.some(filledCell));
+
+              // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+              var headerRowIndex = filteredData.findIndex((row, index) =>
+                row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+              );
+              // Fallback
+              if (headerRowIndex === -1 || headerRowIndex > 25) {
+                headerRowIndex = 0;
+              }
+
+              // Convert filtered JSON back to CSV
+              var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+              csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+              return csv;
+          } catch (e) {
+              console.error(e);
+              return "";
+          }
+      }
+      return gk_fileData[filename] || "";
+    }
+
     document.querySelectorAll('.btn-secondary').forEach(button => {
       button.addEventListener('click', function() {
         this.style.transform = 'scale(1.1)';
         setTimeout(() => this.style.transform = 'scale(1)', 200);
       });
     });
+
+    function showTab(tabId) {
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+      });
+
+      // Remove active class from all buttons
+      document.querySelectorAll('.tab-nav button').forEach(button => {
+        button.classList.remove('active');
+      });
+
+      // Show the selected tab content
+      document.getElementById(tabId).classList.add('active');
+
+      // Add active class to the clicked button
+      document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+    }
   </script>
 </body>
-</html>
+                </html>
