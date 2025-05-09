@@ -102,6 +102,15 @@
       background-position: center;
       margin-bottom: 2rem;
     }
+    .grid .content-card {
+      margin-top: 1rem; /* হালকা নিচে নামানোর জন্য */
+      padding: 1rem;
+      border: 2px solid #333; /* বক্স শেপের জন্য বর্ডার */
+      box-sizing: border-box;
+    }
+    .grid img {
+      border-radius: 0; /* বক্স শেপের জন্য রাউন্ডিং রিমুভ */
+    }
 
     /* Media Queries */
     @media (max-width: 768px) {
@@ -131,6 +140,9 @@
       }
       .hero-image {
         height: 300px;
+      }
+      .grid .content-card {
+        margin-top: 0.5rem; /* ছোট স্ক্রিনে হালকা সামঞ্জস্য */
       }
     }
 
@@ -514,4 +526,4 @@
     });
   </script>
 </body>
-        </html
+                    </html>
