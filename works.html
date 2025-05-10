@@ -94,6 +94,856 @@
       padding-left: 1rem;
       line-height: 1.2;
     }
+    .sub-section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      color: #fff;
+      padding-left: 0.5rem;
+      border-left: 3px solid #00ff00;
+      line-height: 1.2;
+    }
+    .hero-image {
+      width: 100%;
+      height: 400px;
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 2rem;
+    }
+    .grid .content-card {
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 2px solid #333;
+      box-sizing: border-box;
+    }
+    .grid img {
+      border-radius: 0;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      nav {
+        padding: 12px 0;
+      }
+      .container {
+        padding: 0 16px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .content-card {
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+      .sub-section-title {
+        font-size: 1.2rem;
+      }
+      .hero-image {
+        height: 300px;
+      }
+      .grid .content-card {
+        margin-top: 0.5rem;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <!-- Navigation -->
+    <nav>
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold">Jubair Sifat</h1>
+        <ul class="flex space-x-6">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="works.html">Works</a></li>
+          <li><a href="contents.html">Contents</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Image Section -->
+    <div class="hero-image"></div>
+
+    <!-- Works Section -->
+    <section id="works">
+      <div class="container mx-auto">
+        <h2 class="section-title">
+          <span></span>Music Videos
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="content-card p-4">
+            <a href="https://youtu.be/B80nrSBhnXU?si=kOUHszb04Uy2WOBq" target="_blank">
+              <img src="https://img.youtube.com/vi/B80nrSBhnXU/0.jpg" alt="Song 1" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Islamic Song 1</h3>
+            <a href="https://youtu.be/B80nrSBhnXU?si=kOUHszb04Uy2WOBq" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/35xOHV6Tc6s?si=qn3w-XqgjdD44HvH" target="_blank">
+              <img src="https://img.youtube.com/vi/35xOHV6Tc6s/0.jpg" alt="Song 2" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Islamic Song 2</h3>
+            <a href="https://youtu.be/35xOHV6Tc6s?si=qn3w-XqgjdD44HvH" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/LAuugN_1aRU?si=TZmM3hNDOM639kv2" target="_blank">
+              <img src="https://img.youtube.com/vi/LAuugN_1aRU/0.jpg" alt="Song 3" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Islamic Song 3</h3>
+            <a href="https://youtu.be/LAuugN_1aRU?si=TZmM3hNDOM639kv2" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/l0FHXtQcg0c?si=JIAqCiu5dDkhM6sa" target="_blank">
+              <img src="https://img.youtube.com/vi/l0FHXtQcg0c/0.jpg" alt="Song 4" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Islamic Song 4</h3>
+            <a href="https://youtu.be/l0FHXtQcg0c?si=JIAqCiu5dDkhM6sa" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/z2WH0uUS6rw?si=6MiZ0e_W_Sadl9Mm" target="_blank">
+              <img src="https://img.youtube.com/vi/z2WH0uUS6rw/0.jpg" alt="Song 5" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Islamic Song 5</h3>
+            <a href="https://youtu.be/z2WH0uUS6rw?si=6MiZ0e_W_Sadl9Mm" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/aPkKfK9IK3c?si=R9jE6W27ZhZsaeYG" target="_blank">
+              <img src="https://img.youtube.com/vi/aPkKfK9IK3c/0.jpg" alt="Song 6" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Islamic Song 6</h3>
+            <a href="https://youtu.be/aPkKfK9IK3c?si=R9jE6W27ZhZsatYG" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/6JmySSiFDNU?si=w1hXCG6qIiO9uyqL" target="_blank">
+              <img src="https://img.youtube.com/vi/6JmySSiFDNU/0.jpg" alt="Song 7" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Islamic Song 7</h3>
+            <a href="https://youtu.be/6JmySSiFDNU?si=w1hXCG6qIiO9uyqL" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/yIGtGOJm1qc?si=gGwX7i7KCKBh2ntT" target="_blank">
+              <img src="https://img.youtube.com/vi/yIGtGOJm1qc/0.jpg" alt="Song 8" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Islamic Song 8</h3>
+            <a href="https://youtu.be/yIGtGOJm1qc?si=gGwX7i7KCKBh2ntT" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto mt-16">
+        <h2 class="section-title">
+          <span></span>Podcasts
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="content-card p-4">
+            <img src="podcast1.jpg" alt="Podcast 1" class="w-full rounded mb-4">
+            <h3 class="text-xl font-semibold">Podcast Episode 1</h3>
+            <a href="https://youtube.com" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <img src="podcast2.jpg" alt="Podcast 2" class="w-full rounded mb-4">
+            <h3 class="text-xl font-semibold">Podcast Episode 2</h3>
+            <a href="https://youtube.com" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto mt-16">
+        <h2 class="section-title">
+          <span></span>Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="content-card p-4">
+            <a href="https://youtu.be/DZ9LoLYPgGE" target="_blank">
+              <img src="https://img.youtube.com/vi/DZ9LoLYPgGE/0.jpg" alt="Project 1" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">আসসালাম হাবীবি</h3>
+            <a href="https://youtu.be/DZ9LoLYPgGE" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/ADjNmrABLb8" target="_blank">
+              <img src="https://img.youtube.com/vi/ADjNmrABLb8/0.jpg" alt="Project 2" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">ফরিয়াদ</h3>
+            <a href="https://youtu.be/ADjNmrABLb8" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg- green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/Q_K3pS-Eslg" target="_blank">
+              <img src="https://img.youtube.com/vi/Q_K3pS-Eslg/0.jpg" alt="Project 3" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">ইয়া গফুর</h3>
+            <a href="https://youtu.be/Q_K3pS-Eslg" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/ohcWbjyr6LU" target="_blank">
+              <img src="https://img.youtube.com/vi/ohcWbjyr6LU/0.jpg" alt="Project 4" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">লাকাল হামদু</h3>
+            <a href="https://youtu.be/ohcWbjyr6LU" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/UUYzjzxm-bA" target="_blank">
+              <img src="https://img.youtube.com/vi/UUYzjzxm-bA/0.jpg" alt="Project 5" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">শেষ প্রহর</h3>
+            <a href="https://youtu.be/UUYzjzxm-bA" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/PHYh4p3aGMg" target="_blank">
+              <img src="https://img.youtube.com/vi/PHYh4p3aGMg/0.jpg" alt="Project 6" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">লা শারিকাল্লাহ</h3>
+            <a href="https://youtu.be/PHYh4p3aGMg" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/Cnbbu8fNBSE" target="_blank">
+              <img src="https://img.youtube.com/vi/Cnbbu8fNBSE/0.jpg" alt="Project 7" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">লা শারিকাল্লাহ (কভার)</h3>
+            <a href="https://youtu.be/Cnbbu8fNBSE" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/DvxPYfwXqfM" target="_blank">
+              <img src="https://img.youtube.com/vi/DvxPYfwXqfM/0.jpg" alt="Project 8" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">অনুভবে শুধু তুমি</h3>
+            <a href="https://youtu.be/DvxPYfwXqfM" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/aGS0bi87V3M" target="_blank">
+              <img src="https://img.youtube.com/vi/aGS0bi87V3M/0.jpg" alt="Project 9" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">তুমি নেই তাই (এইচ আহ্মেদ)</h3>
+            <a href="https://youtu.be/aGS0bi87V3M" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/Qflj7Ve2aRo" target="_blank">
+              <img src="https://img.youtube.com/vi/Qflj7Ve2aRo/0.jpg" alt="Project 10" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">তুমি নেই তাই (আহমেদ জুবায়ের)</h3>
+            <a href="https://youtu.be/Qflj7Ve2aRo" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/cHvDaYYPmJ8" target="_blank">
+              <img src="https://img.youtube.com/vi/cHvDaYYPmJ8/0.jpg" alt="Project 11" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">নাবিউল আম্বিয়া</h3>
+            <a href="https://youtu.be/cHvDaYYPmJ8" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/mVUOVynahaU" target="_blank">
+              <img src="https://img.youtube.com/vi/mVUOVynahaU/0.jpg" alt="Project 12" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">যিকির</h3>
+            <a href="https://youtu.be/mVUOVynahaU" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/sH3-e5F1iQ4" target="_blank">
+              <img src="https://img.youtube.com/vi/sH3-e5F1iQ4/0.jpg" alt="Project 13" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">তোহফায়ে রমাদান</h3>
+            <a href="https://youtu.be/sH3-e5F1iQ4" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/6s5Ab08DaK8" target="_blank">
+              <img src="https://img.youtube.com/vi/6s5Ab08DaK8/0.jpg" alt="Project 14" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">মাদিনা</h3>
+            <a href="https://youtu.be/6s5Ab08DaK8" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/ok2gyE_o6lw" target="_blank">
+              <img src="https://img.youtube.com/vi/ok2gyE_o6lw/0.jpg" alt="Project 15" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">দেখা দিবে কবে?</h3>
+            <a href="https://youtu.be/ok2gyE_o6lw" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/O2RBbJleHBk" target="_blank">
+              <img src="https://img.youtube.com/vi/O2RBbJleHBk/0.jpg" alt="Project 16" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">সালাতে এসো</h3>
+            <a href="https://youtu.be/O2RBbJleHBk" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/QI9a58tzIso" target="_blank">
+              <img src="https://img.youtube.com/vi/QI9a58tzIso/0.jpg" alt="Project 17" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">হাবীবি ইয়া রাসুল</h3>
+            <a href="https://youtu.be/QI9a58tzIso" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/NbDJ1GQRWxc" target="_blank">
+              <img src="https://img.youtube.com/vi/NbDJ1GQRWxc/0.jpg" alt="Project 18" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">লা ইলাহা ইল্লাল্লাহ</h3>
+            <a href="https://youtu.be/NbDJ1GQRWxc" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/R7xuzDighzA" target="_blank">
+              <img src="https://img.youtube.com/vi/R7xuzDighzA/0.jpg" alt="Project 19" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">ফজর হলে জায়নামাজে যেও</h3>
+            <a href="https://youtu.be/R7xuzDighzA" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/SljILI4gsd4" target="_blank">
+              <img src="https://img.youtube.com/vi/SljILI4gsd4/0.jpg" alt="Project 20" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">পাহাড় সম পাপ</h3>
+            <a href="https://youtu.be/SljILI4gsd4" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/Mgkel4x5HqQ" target="_blank">
+              <img src="https://img.youtube.com/vi/Mgkel4x5HqQ/0.jpg" alt="Project 21" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">হয়েছি ফিদা</h3>
+            <a href="https://youtu.be/Mgkel4x5HqQ" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/bJrhZVdgVJk" target="_blank">
+              <img src="https://img.youtube.com/vi/bJrhZVdgVJk/0.jpg" alt="Project 22" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">রমাদান (যুবায়ের সিফাত)</h3>
+            <a href="https://youtu.be/bJrhZVdgVJk" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/7jvJ_x8qcdU" target="_blank">
+              <img src="https://img.youtube.com/vi/7jvJ_x8qcdU/0.jpg" alt="Project 23" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">হে প্রিয় কথা দাও</h3>
+            <a href="https://youtu.be/7jvJ_x8qcdU" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/JhdTKu8HNgA" target="_blank">
+              <img src="https://img.youtube.com/vi/JhdTKu8HNgA/0.jpg" alt="Project 24" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">প্রিয় নাবি আল আরাবি</h3>
+            <a href="https://youtu.be/JhdTKu8HNgA" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/DFUzybVV9PE" target="_blank">
+              <img src="https://img.youtube.com/vi/DFUzybVV9PE/0.jpg" alt="Project 25" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">মাদিনাওয়ালা</h3>
+            <a href="https://youtu.be/DFUzybVV9PE" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/11C1dZNqHT8" target="_blank">
+              <img src="https://img.youtube.com/vi/11C1dZNqHT8/0.jpg" alt="Project 27" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">হাবিবাল কলবি</h3>
+            <a href="https://youtu.be/11C1dZNqHT8" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/dNlE5QO69bA" target="_blank">
+              <img src="https://img.youtube.com/vi/dNlE5QO69bA/0.jpg" alt="Project 28" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">ভুল পথ</h3>
+            <a href="https://youtu.be/dNlE5QO69bA" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/nBloFWH9vKE" target="_blank">
+              <img src="https://img.youtube.com/vi/nBloFWH9vKE/0.jpg" alt="Project 29" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">একুশ আমার</h3>
+            <a href="https://youtu.be/nBloFWH9vKE" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/gObkfoM24SI" target="_blank">
+              <img src="https://img.youtube.com/vi/gObkfoM24SI/0.jpg" alt="Project 30" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">রূহের জগৎ</h3>
+            <a href="https://youtu.be/gObkfoM24SI" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/EKigFIpDv_A" target="_blank">
+              <img src="https://img.youtube.com/vi/EKigFIpDv_A/0.jpg" alt="Project 35" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">আঁধার কবর</h3>
+            <a href="https://youtu.be/EKigFIpDv_A" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/YbN6h-ZZpDc" target="_blank">
+              <img src="https://img.youtube.com/vi/YbN6h-ZZpDc/0.jpg" alt="Project 36" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">এসেছে রমাদান</h3>
+            <a href="https://youtu.be/YbN6h-ZZpDc" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/v8JsLeIW-rE" target="_blank">
+              <img src="https://img.youtube.com/vi/v8JsLeIW-rE/0.jpg" alt="Project 37" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">মাদিনাওয়ালা (সাইমা রাহমান)</h3>
+            <a href="https://youtu.be/v8JsLeIW-rE" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/kGGUH5xzhz8" target="_blank">
+              <img src="https://img.youtube.com/vi/kGGUH5xzhz8/0.jpg" alt="Project 38" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">পাপ মুছে দিতে</h3>
+            <a href="https://youtu.be/kGGUH5xzhz8" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/R-Z6pMeo1YQ" target="_blank">
+              <img src="https://img.youtube.com/vi/R-Z6pMeo1YQ/0.jpg" alt="Project 39" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">ইয়া মাওলানা</h3>
+            <a href="https://youtu.be/R-Z6pMeo1YQ" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/_ouzj7UU5J8" target="_blank">
+              <img src="https://img.youtube.com/vi/_ouzj7UU5J8/0.jpg" alt="Project 41" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">ইন্নাল্লাহা আলা...</h3>
+            <a href="https://youtu.be/_ouzj7UU5J8" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/CwUSDT1E1VQ" target="_blank">
+              <img src="https://img.youtube.com/vi/CwUSDT1E1VQ/0.jpg" alt="Project 42" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">ত্যাগের ফুল</h3>
+            <a href="https://youtu.be/CwUSDT1E1VQ" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/ROPE1s4oLVc" target="_blank">
+              <img src="https://img.youtube.com/vi/ROPE1s4oLVc/0.jpg" alt="Project 43" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">শুকরিয়া</h3>
+            <a href="https://youtu.be/ROPE1s4oLVc" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/K-xIJQvf21o" target="_blank">
+              <img src="https://img.youtube.com/vi/K-xIJQvf21o/0.jpg" alt="Project 44" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">কুলহু আল্লাহ</h3>
+            <a href="https://youtu.be/K-xIJQvf21o" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/7QyADkyJkdc" target="_blank">
+              <img src="https://img.youtube.com/vi/7QyADkyJkdc/0.jpg" alt="Project 45" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">রাসুলের প্রেম</h3>
+            <a href="https://youtu.be/7QyADkyJkdc" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto mt-16">
+        <h2 class="section-title">
+          <span></span>Quran Recitation
+        </h2>
+        <!-- Surah Yasin -->
+        <h3 class="sub-section-title">Surah Yasin</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="content-card p-4">
+            <a href="https://youtu.be/mbzX-904NLA?si=XTbWVNIy2ZUXQAuQ" target="_blank">
+              <img src="https://img.youtube.com/vi/mbzX-904NLA/0.jpg" alt="Surah Yasin 1" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Yasin 1</h3>
+            <a href="https://youtu.be/mbzX-904NLA?si=XTbWVNIy2ZUXQAuQ" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/AacRdS9OoQI?si=im_tjizN_UzqMVtj" target="_blank">
+              <img src="https://img.youtube.com/vi/AacRdS9OoQI/0.jpg" alt="Surah Yasin 2" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Yasin 2</h3>
+            <a href="https://youtu.be/AacRdS9OoQI?si=im_tjizN_UzqMVtj" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/eE5EtbD5AMQ?si=eCsXc9Na_--Iai-l" target="_blank">
+              <img src="https://img.youtube.com/vi/eE5EtbD5AMQ/0.jpg" alt="Surah Yasin 3" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Yasin 3</h3>
+            <a href="https://youtu.be/eE5EtbD5AMQ?si=eCsXc9Na_--Iai-l" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/_f8tDxWpAwM?si=CZD0WD9z6JAzpBvv" target="_blank">
+              <img src="https://img.youtube.com/vi/_f8tDxWpAwM/0.jpg" alt="Surah Yasin 4" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Yasin 4</h3>
+            <a href="https://youtu.be/_f8tDxWpAwM?si=CZD0WD9z6JAzpBvv" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+        </div>
+        <!-- Surah Ar Rahman -->
+        <h3 class="sub-section-title">Surah Ar Rahman</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="content-card p-4">
+            <a href="https://youtu.be/AacRdS9OoQI?si=-fvhJ7C1ekd0GsHR" target="_blank">
+              <img src="https://img.youtube.com/vi/AacRdS9OoQI/0.jpg" alt="Surah Ar Rahman 1" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Ar Rahman 1</h3>
+            <a href="https://youtu.be/AacRdS9OoQI?si=-fvhJ7C1ekd0GsHR" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/kb7unAJ7M8g?si=rRD0CHVriXZngyC1" target="_blank">
+              <img src="https://img.youtube.com/vi/kb7unAJ7M8g/0.jpg" alt="Surah Ar Rahman 2" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Ar Rahman 2</h3>
+            <a href="https://youtu.be/kb7unAJ7M8g?si=rRD0CHVriXZngyC1" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/OfJuCWA51g0?si=T5XWm1hUpdN7VSAW" target="_blank">
+              <img src="https://img.youtube.com/vi/OfJuCWA51g0/0.jpg" alt="Surah Ar Rahman 3" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Ar Rahman 3</h3>
+            <a href="https://youtu.be/OfJuCWA51g0?si=T5XWm1hUpdN7VSAW" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/GLLpH6inBuI?si=acnyAUBLHyWBTqGa" target="_blank">
+              <img src="https://img.youtube.com/vi/GLLpH6inBuI/0.jpg" alt="Surah Ar Rahman 4" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Ar Rahman 4</h3>
+            <a href="https://youtu.be/GLLpH6inBuI?si=acnyAUBLHyWBTqGa" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+        </div>
+        <!-- Surah Al Mulk -->
+        <h3 class="sub-section-title">Surah Al Mulk</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="content-card p-4">
+            <a href="https://youtu.be/asVn_V5ZJpM?si=ODkx9lICGxojzteG" target="_blank">
+              <img src="https://img.youtube.com/vi/asVn_V5ZJpM/0.jpg" alt="Surah Al Mulk 1" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Mulk 1</h3>
+            <a href="https://youtu.be/asVn_V5ZJpM?si=ODkx9lICGxojzteG" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/RGhwAjJ4AJ0?si=97jmK0WcgK0zaU_Y" target="_blank">
+              <img src="https://img.youtube.com/vi/RGhwAjJ4AJ0/0.jpg" alt="Surah Al Mulk 2" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Mulk 2</h3>
+            <a href="https://youtu.be/RGhwAjJ4AJ0?si=97jmK0WcgK0zaU_Y" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/wIXRIDX1kHY?si=V2EenQbH33SG6IAS" target="_blank">
+              <img src="https://img.youtube.com/vi/wIXRIDX1kHY/0.jpg" alt="Surah Al Mulk 3" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Mulk 3</h3>
+            <a href="https://youtu.be/wIXRIDX1kHY?si=V2EenQbH33SG6IAS" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/_i5x7aHKMYM?si=Mg6hR6cWLKR84xZy" target="_blank">
+              <img src="https://img.youtube.com/vi/_i5x7aHKMYM/0.jpg" alt="Surah Al Mulk 4" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Mulk 4</h3>
+            <a href="https://youtu.be/_i5x7aHKMYM?si=Mg6hR6cWLKR84xZy" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+        </div>
+        <!-- Surah Al Khaf -->
+        <h3 class="sub-section-title">Surah Al Khaf</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="content-card p-4">
+            <a href="https://youtu.be/DLQwkZrgfa4?si=8oNmvMaM4Niiin0f" target="_blank">
+              <img src="https://img.youtube.com/vi/DLQwkZrgfa4/0.jpg" alt="Surah Al Khaf 1" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Khaf 1</h3>
+            <a href="https://youtu.be/DLQwkZrgfa4?si=8oNmvMaM4Niiin0f" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/024ehB3y5q0?si=suYxHUZ_YsVsiVr0" target="_blank">
+              <img src="https://img.youtube.com/vi/024ehB3y5q0/0.jpg" alt="Surah Al Khaf 2" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Khaf 2</h3>
+            <a href="https://youtu.be/024ehB3y5q0?si=suYxHUZ_YsVsiVr0" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/hd7xoCzHYTo?si=YixoYFoJuwCWcPsZ" target="_blank">
+              <img src="https://img.youtube.com/vi/hd7xoCzHYTo/0.jpg" alt="Surah Al Khaf 3" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Khaf 3</h3>
+            <a href="https://youtu.be/hd7xoCzHYTo?si=YixoYFoJuwCWcPsZ" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/VF8mcoIibs8?si=XN6BIBEtsgosPHuR" target="_blank">
+              <img src="https://img.youtube.com/vi/VF8mcoIibs8/0.jpg" alt="Surah Al Khaf 4" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Khaf 4</h3>
+            <a href="https://youtu.be/VF8mcoIibs8?si=XN6BIBEtsgosPHuR" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+        </div>
+        <!-- Surah Al Waqiah -->
+        <h3 class="sub-section-title">Surah Al Waqiah</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="content-card p-4">
+            <a href="https://youtu.be/GCYi-RKenWg?si=C5Tp_yOpyGegK0Hd" target="_blank">
+              <img src="https://img.youtube.com/vi/GCYi-RKenWg/0.jpg" alt="Surah Al Waqiah 1" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Waqiah 1</h3>
+            <a href="https://youtu.be/GCYi-RKenWg?si=C5Tp_yOpyGegK0Hd" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/mVnwgA1k0FY?si=LsrrSkXoSIjTUT6L" target="_blank">
+              <img src="https://img.youtube.com/vi/mVnwgA1k0FY/0.jpg" alt="Surah Al Waqiah 2" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Waqiah 2</h3>
+            <a href="https://youtu.be/mVnwgA1k0FY?si=LsrrSkXoSIjTUT6L" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/FHvdzzXypvE?si=UchLo0hJhdQrBdXC" target="_blank">
+              <img src="https://img.youtube.com/vi/FHvdzzXypvE/0.jpg" alt="Surah Al Waqiah 3" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Waqiah 3</h3>
+            <a href="https://youtu.be/FHvdzzXypvE?si=UchLo0hJhdQrBdXC" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/4fQuX3Rok40?si=xf8VMoJcIzmPj3Zv" target="_blank">
+              <img src="https://img.youtube.com/vi/4fQuX3Rok40/0.jpg" alt="Surah Al Waqiah 4" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al Waqiah 4</h3>
+            <a href="https://youtu.be/4fQuX3Rok40?si=xf8VMoJcIzmPj3Zv" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+        </div>
+        <!-- All Surah -->
+        <h3 class="sub-section-title">All Surah</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="content-card p-4">
+            <a href="https://youtu.be/R9gZTZwOTKQ?si=Tr3GCdD4OYyTvPl0" target="_blank">
+               <img src="https://img.youtube.com/vi/R9gZTZwOTKQ/0.jpg" alt="Surah Al-Baqarah" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al-Baqarah</h3>
+            <a href="https://youtu.be/R9gZTZwOTKQ?si=Tr3GCdD4OYyTvPl0" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/57UKY-ithCw?si=NHrlnSPQ1WeJgYR4" target="_blank">
+              <img src="https://img.youtube.com/vi/57UKY-ithCw/0.jpg" alt="Surah Al-Maidah" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al-Maidah</h3>
+            <a href="https://youtu.be/57UKY-ithCw?si=NHrlnSPQ1WeJgYR4" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/aDB2CDL5fuU?si=lfxoWuhLtXnK5q12" target="_blank">
+              <img src="https://img.youtube.com/vi/aDB2CDL5fuU/0.jpg" alt="Surah Al-Anfal" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al-Anfal</h3>
+            <a href="https://youtu.be/aDB2CDL5fuU?si=lfxoWuhLtXnK5q12" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/2rHh10dsk14?si=1n97olayqTWjLSpO" target="_blank">
+              <img src="https://img.youtube.com/vi/2rHh10dsk14/0.jpg" alt="Surah At-Tawbah" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah At-Tawbah</h3>
+            <a href="https://youtu.be/2rHh10dsk14?si=1n97olayqTWjLSpO" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/zfpD_XZgISM?si=7rJpOS3rAvhaBlOl" target="_blank">
+              <img src="https://img.youtube.com/vi/zfpD_XZgISM/0.jpg" alt="Surah At-Tawbah Tune-2" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah At-Tawbah Tune-2</h3>
+            <a href="https://youtu.be/zfpD_XZgISM?si=7rJpOS3rAvhaBlOl" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/yDz8yXJv6uw?si=ZBp-su-dbPFBocBi" target="_blank">
+              <img src="https://img.youtube.com/vi/yDz8yXJv6uw/0.jpg" alt="Surah Al-Hud" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al-Hud</h3>
+            <a href="https://youtu.be/yDz8yXJv6uw?si=ZBp-su-dbPFBocBi" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/ro3pjGFEuY8?si=fiHSXmc4Atdh_z5G" target="_blank">
+              <img src="https://img.youtube.com/vi/ro3pjGFEuY8/0.jpg" alt="Surah Yusuf" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Yusuf</h3>
+            <a href="https://youtu.be/ro3pjGFEuY8?si=fiHSXmc4Atdh_z5G" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/BNDlzhJoeFM?si=hmq9QWyJYSOH6RoK" target="_blank">
+              <img src="https://img.youtube.com/vi/BNDlzhJoeFM/0.jpg" alt="Surah Ar-Ra’d" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Ar-Ra’d</h3>
+            <a href="https://youtu.be/BNDlzhJoeFM?si=hmq9QWyJYSOH6RoK" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/9-RX5Eq4DAk?si=AIow4scH7X-aGxhj" target="_blank">
+              <img src="https://img.youtube.com/vi/9-RX5Eq4DAk/0.jpg" alt="Surah Ibrahim" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Ibrahim</h3>
+            <a href="https://youtu.be/9-RX5Eq4DAk?si=AIow4scH7X-aGxhj" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/Om5gVcaZeR4?si=60cbEGB51E7kLecP" target="_blank">
+              <img src="https://img.youtube.com/vi/Om5gVcaZeR4/0.jpg" alt="Surah An-Nahl" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah An-Nahl</h3>
+            <a href="https://youtu.be/Om5gVcaZeR4?si=60cbEGB51E7kLecP" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/QuVtonCmBaQ?si=_AxEUa_uQdL6Q0uI" target="_blank">
+              <img src="https://img.youtube.com/vi/QuVtonCmBaQ/0.jpg" alt="Surah Al-Isra" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al-Isra</h3>
+            <a href="https://youtu.be/QuVtonCmBaQ?si=_AxEUa_uQdL6Q0uI" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/DLQwkZrgfa4?si=7mwJ6s2--wriEMwi" target="_blank">
+              <img src="https://img.youtube.com/vi/DLQwkZrgfa4/0.jpg" alt="Surah Al-Kahf" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al-Kahf</h3>
+            <a href="https://youtu.be/DLQwkZrgfa4?si=7mwJ6s2--wriEMwi" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/n_t_hXaN2t0?si=b3F0fkwi5sx-5eHF" target="_blank">
+              <img src="https://img.youtube.com/vi/n_t_hXaN2t0/0.jpg" alt="Surah Maryam" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Maryam</h3>
+            <a href="https://youtu.be/n_t_hXaN2t0?si=b3F0fkwi5sx-5eHF" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/a_uxu7yDQxI?si=pAM0fQIi5j8PoyIe" target="_blank">
+              <img src="https://img.youtube.com/vi/a_uxu7yDQxI/0.jpg" alt="Surah Maryam Tune 02" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Maryam Tune 02</h3>
+            <a href="https://youtu.be/a_uxu7yDQxI?si=pAM0fQIi5j8PoyIe" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/2fx660m-vpo?si=FcWGy7Ah8xon-vho" target="_blank">
+              <img src="https://img.youtube.com/vi/2fx660m-vpo/0.jpg" alt="Surah Maryam Tune 03" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Maryam Tune 03</h3>
+            <a href="https://youtu.be/2fx660m-vpo?si=FcWGy7Ah8xon-vho" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/JJLNiwmwLSk?si=BdnFO9wyin_haJtF" target="_blank">
+              <img src="https://img.youtube.com/vi/JJLNiwmwLSk/0.jpg" alt="Surah Taha" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Taha</h3>
+            <a href="https://youtu.be/JJLNiwmwLSk?si=BdnFO9wyin_haJtF" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          </div>
+          <div class="content-card p-4">
+            <a href="https://youtu.be/Z9sB7YAf9Ug?si=dkYTDX4A6EGGD9Zs" target="_blank">
+              <img src="https://img.youtube.com/vi/Z9sB7YAf9Ug/0.jpg" alt="Surah Al-Anbiya" class="w-full rounded mb-4">
+            </a>
+            <h3 class="text-xl font-semibold">Surah Al-Anbiya</h3>
+            <a href="https://youtu.be/Z9sB7YAf9Ug?si=dkYTDX4A6EGGD9Zs" target="_blank" class="bg-green-500 text-white px-4 py-2 mt-2 inline-block rounded hover:bg-green-600">Watch</a>
+          Accha shuno 1ta code a kichu update kora lagbe i mean add kora lagbe kono changes kora chara amne ja ache thakbe ar kichu kichu jinish shudu add kora lagbe ar age e code lekha suru korba na ami details gula diwar por tarpor suru korba ar banglai kotha bolba amr shathe 
+
+
+ঠিক আছে, ভাই! তুমি আমাকে কী কী ডিটেইলস দিতে চাও, সেগুলো বলো। কোডের কোন অংশে কী কী অ্যাড করতে হবে, স্পষ্ট করে বললেই আমি বুঝে নেব। আমি তোমার দেওয়া ডিটেইলসের ওপর ভিত্তি করে কাজ শুরু করব, আর আগের কোডে কোনো চেঞ্জ করব না, শুধু নতুন জিনিস অ্যাড করব। বলো, কী করতে হবে! 😎
+
+
+
+
+
+
+
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jubair Sifat - Works</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.8);
+      min-height: 100vh;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #1a1a1a;
+      padding: 16px 0;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .content-card {
+      background: #1a1a1a;
+      border-radius: 8px;
+    }
+    .content-card {
+      transition: transform 0.3s;
+    }
+    .content-card:hover {
+      transform: scale(1.05);
+    }
+    .section-title {
+      position: relative;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      color: #fff;
+      border-left: 5px solid #ff0000;
+      padding-left: 1rem;
+      line-height: 1.2;
+    }
     .hero-image {
       width: 100%;
       height: 400px;
@@ -590,4 +1440,4 @@
     });
   </script>
 </body>
-</html>
+        </html>
