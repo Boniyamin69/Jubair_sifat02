@@ -112,21 +112,22 @@
       justify-content: space-around;
       margin-bottom: 16px;
     }
-    .tab-nav button {
+    .tab-btn {
       background: #333;
       color: #fff;
       padding: 8px 16px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.3s, color 0.3s;
     }
-    .tab-nav button:hover {
+    .tab-btn.active {
+      background: #ff0000;
+      color: #fff;
+      font-weight: bold;
+    }
+    .tab-btn:hover {
       background: #555;
-    }
-    .tab-nav button.active {
-      background: #fff;
-      color: #000;
     }
     .tab-content {
       display: none;
@@ -140,6 +141,8 @@
       margin-bottom: 8px;
       border-left: 2px solid #ccc;
       border-radius: 4px;
+      display: flex;
+      align-items: center;
     }
     .tab-content a {
       color: #00ffff;
@@ -148,14 +151,17 @@
     .tab-content a:hover {
       text-decoration: underline;
     }
-
-    /* Animation Styles */
+    .logo-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
     .animated-content {
       opacity: 0;
       transform: scale(0.9);
       animation: fadeInUp 1s ease-out forwards;
     }
-
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -166,8 +172,6 @@
         transform: translateY(0) scale(1);
       }
     }
-
-    /* Apply animation to main sections */
     .container {
       animation-delay: 0.2s;
     }
@@ -177,16 +181,12 @@
     footer {
       animation-delay: 0.6s;
     }
-
-    /* Ensure animation triggers on page load */
     .animated-content {
       animation-play-state: paused;
     }
     body.loaded .animated-content {
       animation-play-state: running;
     }
-
-    /* Media Queries */
     @media (max-width: 768px) {
       nav ul {
         display: none;
@@ -229,12 +229,11 @@
         flex-wrap: wrap;
         gap: 8px;
       }
-      .tab-nav button {
+      .tab-btn {
         flex: 1 1 30%;
         text-align: center;
       }
     }
-
     @media (min-width: 769px) and (max-width: 1024px) {
       .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -246,7 +245,6 @@
         width: 40%;
       }
     }
-
     @media (min-width: 1025px) {
       .grid {
         grid-template-columns: repeat(4, 1fr);
@@ -262,7 +260,6 @@
 </head>
 <body class="loaded">
   <div class="overlay">
-    <!-- Navigation -->
     <nav class="animated-content">
       <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-xl font-bold">Jubair Sifat</h1>
@@ -274,8 +271,6 @@
         </ul>
       </div>
     </nav>
-
-    <!-- Home Section -->
     <div class="container mx-auto flex flex-col md:flex-row items-center animated-content hero-section">
       <div class="md:w-2/3">
         <h1 class="text-5xl font-bold mb-4">JUBAIR SIFAT</h1>
@@ -337,48 +332,49 @@
       <div class="text-center mt-6">
       </div>
     </div>
-
-    <!-- Tabbed Box Section -->
     <div class="container mx-auto mt-16 animated-content tab-box">
       <h2 class="section-title">
         <span></span>My Profile
       </h2>
       <div class="tab-box">
         <div class="tab-nav">
-          <button class="active" onclick="showTab('experience')">Experience</button>
-          <button onclick="showTab('skills')">Skills</button>
-          <button onclick="showTab('education')">Education</button>
-          <button onclick="showTab('publications')">Publications</button>
-          <button onclick="showTab('awards')">Awards</button>
-          <button onclick="showTab('languages')">Languages</button>
+          <button class="tab-btn active" onclick="showTab('experience')">Experience</button>
+          <button class="tab-btn" onclick="showTab('skills')">Skills</button>
+          <button class="tab-btn" onclick="showTab('education')">Education</button>
+          <button class="tab-btn" onclick="showTab('publications')">Publications</button>
+          <button class="tab-btn" onclick="showTab('certifications')">Certifications</button>
+          <button class="tab-btn" onclick="showTab('awards')">Awards</button>
+          <button class="tab-btn" onclick="showTab('languages')">Languages</button>
         </div>
         <div id="experience" class="tab-content active">
-          <div class="info-box">The Holy Quran Reciter, Zikrullah TV (USA), January 2024 - Present</div>
-          <div class="info-box">Child Islamic Singer, Obiram Shilpigosthi, Bogura, Bangladesh, 2014-2015</div>
-          <div class="info-box">Feature and Content Writer, Youth Organisations Bangladesh, Nov 2018 - Present, Sirajganj, Bangladesh</div>
-          <div class="info-box">Head of Cultural Member, Hikmah Alumni Association, Aug 2019 - Present, Uttara, Dhaka, Bangladesh</div>
-          <div class="info-box">Senior Artist, Oishiswr Shilpigosthi, Jan 2017 - Present, Uttara, Dhaka, Bangladesh</div>
-          <div class="info-box">Creative Nasheed Composer, Tanvir Khan Studio, Jan 2024 - Present, Dhaka, Bangladesh</div>
-          <div class="info-box">Lyricist and Melodist, Holy Tune & Kalarab, 2021 - Present, Paltan, Dhaka, Bangladesh</div>
-          <div class="info-box">Chief Executive & Founding Member, Melodians, Aug 2022 - Sep 2023, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo1.png" alt="Logo" class="logo-icon"> Chief Executive Officer, Mukti Ghonta, Nov 2018 - Present, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo2.png" alt="Logo" class="logo-icon"> Head of Marketing & Band Artist, Qaseeda, Aug 2024 - Present, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo3.png" alt="Logo" class="logo-icon"> Owner & Founder, Videophics, Jan 2019 - Present, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo4.png" alt="Logo" class="logo-icon"> Creative Department Head, Qweek AI, Jan 2024 - Present, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo5.png" alt="Logo" class="logo-icon"> Photographer & Graphics Designer, 100 Million Mindset, Aug 2022 - Sep 2023, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo6.png" alt="Logo" class="logo-icon"> Campus Ambassador, English Olympiad, Aug 2022 - Oct 2023, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo7.png" alt="Logo" class="logo-icon"> President & Founder, Millat Photography Club, Nov 2022 - Aug 2023, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo8.png" alt="Logo" class="logo-icon"> Founder, Creative Youth Community, Dec 2022 - Present, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo9.png" alt="Logo" class="logo-icon"> Youth Ambassador, Youth Career Institute, Jun 2023 - Present, Dhaka, Bangladesh</div>
+          <div class="info-box"><img src="logo10.png" alt="Logo" class="logo-icon"> Campus Ambassador, Dhaka International Mobile Film Festival, Jan 2022 - March 2023, Dhaka, Bangladesh</div>
         </div>
         <div id="skills" class="tab-content">
-          <div class="info-box">The Holy Quran Recitation</div>
-          <div class="info-box">Islamic Speaking</div>
-          <div class="info-box">Song Tuning</div>
-          <div class="info-box">Islamic Nasheed Writing</div>
-          <div class="info-box">Islamic Nasheed Singing</div>
-          <div class="info-box">Audio Engineering</div>
-          <div class="info-box">Graphic Design</div>
-          <div class="info-box">Cinematography</div>
-          <div class="info-box">Photography</div>
-          <div class="info-box">Video Editing</div>
+          <div class="info-box">★ The Holy Quran Recitation</div>
+          <div class="info-box">★ Islamic Speaking</div>
+          <div class="info-box">★ Song Tuning</div>
+          <div class="info-box">★ Islamic Nasheed Writing</div>
+          <div class="info-box">★ Islamic Nasheed Singing</div>
+          <div class="info-box">★ Audio Engineering</div>
+          <div class="info-box">★ Graphic Design</div>
+          <div class="info-box">★ Cinematography</div>
+          <div class="info-box">★ Photography</div>
+          <div class="info-box">★ Video Editing</div>
         </div>
         <div id="education" class="tab-content">
-          <div class="info-box">Al Jamiatul Islamia Qasemul Ulum (Jamil Madrasha), Hafeez-e Quran, 2015-2016</div>
-          <div class="info-box">Darunnazat Siddikia Kamil Madrasah, HSC Level, 2021 - 2023, A+, <a href="#">Visit</a></div>
-          <div class="info-box">Muradpur Islamia Fazil Madrasah, SSC Level, 2019 - 2021, 4.83 (Science), <a href="#">Visit</a></div>
-          <div class="info-box">Madrasatul Hikmah Al Islamiah, JDC Level (Arabic Medium School)</div>
+          <div class="info-box"><img src="logo11.png" alt="Logo" class="logo-icon"> Al Jamiatul Islamia Qasemul Ulum (Jamil Madrasha), Hafeez-e Quran, 2015-2016</div>
+          <div class="info-box"><img src="logo12.png" alt="Logo" class="logo-icon"> Darunnazat Siddikia Kamil Madrasah, HSC Level, 2021 - 2023, A+, <a href="#">Visit</a></div>
+          <div class="info-box"><img src="logo13.png" alt="Logo" class="logo-icon"> Muradpur Islamia Fazil Madrasah, SSC Level, 2019 - 2021, 4.83 (Science), <a href="#">Visit</a></div>
+          <div class="info-box"><img src="logo14.png" alt="Logo" class="logo-icon"> Madrasatul Hikmah Al Islamiah, JDC Level (Arabic Medium School)</div>
         </div>
         <div id="publications" class="tab-content">
           <div class="info-box">★ Kabbomala</div>
@@ -392,22 +388,20 @@
         <div id="certifications" class="tab-content">
         </div>
         <div id="awards" class="tab-content">
-          <div class="info-box">1st Champion, Quraner Alo Power by Priojon Multimedia, Finalist 2022</div>
-          <div class="info-box">1st Runner-Up, Hand Writing, Sheikh Rasel Annual Competition, Issued: Dec 2012</div>
-          <div class="info-box">2nd Runner-Up, Islamic Nasheed, Sheikh Rasel Annual Competition, Issued: Dec 2012</div>
-          <div class="info-box">Award of Renesa, Darunnazat Siddikia Kamil Madrasah (Powered by Chatro Hijbullah), 2023</div>
-          <div class="info-box">Best Singer Award, Madrasatul Hikmah Al Islamiah, Issued: Feb 2021</div>
+          <div class="info-box"><img src="logo15.png" alt="Logo" class="logo-icon"> 1st Champion, Quraner Alo Power by Priojon Multimedia, Finalist 2022</div>
+          <div class="info-box"><img src="logo16.png" alt="Logo" class="logo-icon"> 1st Runner-Up, Hand Writing, Sheikh Rasel Annual Competition, Issued: Dec 2012</div>
+          <div class="info-box"><img src="logo17.png" alt="Logo" class="logo-icon"> 2nd Runner-Up, Islamic Nasheed, Sheikh Rasel Annual Competition, Issued: Dec 2012</div>
+          <div class="info-box"><img src="logo18.png" alt="Logo" class="logo-icon"> Award of Renesa, Darunnazat Siddikia Kamil Madrasah (Powered by Chatro Hijbullah), 2023</div>
+          <div class="info-box"><img src="logo19.png" alt="Logo" class="logo-icon"> Best Singer Award, Madrasatul Hikmah Al Islamiah, Issued: Feb 2021</div>
         </div>
         <div id="languages" class="tab-content">
-          <div class="info-box">★ Bangla</div>
-          <div class="info-box">★ English</div>
-          <div class="info-box">★ Arabic</div>
-          <div class="info-box">★ Urdu</div>
+          <div class="info-box"><img src="logo20.png" alt="Logo" class="logo-icon"> Bangla</div>
+          <div class="info-box"><img src="logo21.png" alt="Logo" class="logo-icon"> English</div>
+          <div class="info-box"><img src="logo22.png" alt="Logo" class="logo-icon"> Arabic</div>
+          <div class="info-box"><img src="logo23.png" alt="Logo" class="logo-icon"> Urdu</div>
         </div>
       </div>
     </div>
-
-    <!-- Footer Section -->
     <footer class="animated-content">
       <div class="container mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-center">
@@ -451,7 +445,6 @@
       </div>
     </footer>
   </div>
-
   <script type="text/javascript">
     var gk_isXlsx = false;
     var gk_xlsxFileLookup = {};
@@ -465,23 +458,15 @@
               var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
               var firstSheetName = workbook.SheetNames[0];
               var worksheet = workbook.Sheets[firstSheetName];
-
-              // Convert sheet to JSON to filter blank rows
               var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-              // Filter out blank rows (rows where all cells are empty, null, or undefined)
               var filteredData = jsonData.filter(row => row.some(filledCell));
-
-              // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
               var headerRowIndex = filteredData.findIndex((row, index) =>
                 row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
               );
-              // Fallback
               if (headerRowIndex === -1 || headerRowIndex > 25) {
                 headerRowIndex = 0;
               }
-
-              // Convert filtered JSON back to CSV
-              var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+              var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
               csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
               return csv;
           } catch (e) {
@@ -491,36 +476,25 @@
       }
       return gk_fileData[filename] || "";
     }
-
     document.querySelectorAll('.btn-secondary').forEach(button => {
       button.addEventListener('click', function() {
         this.style.transform = 'scale(1.1)';
         setTimeout(() => this.style.transform = 'scale(1)', 200);
       });
     });
-
     function showTab(tabId) {
-      // Hide all tab contents
       document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.remove('active');
       });
-
-      // Remove active class from all buttons
-      document.querySelectorAll('.tab-nav button').forEach(button => {
+      document.querySelectorAll('.tab-btn').forEach(button => {
         button.classList.remove('active');
       });
-
-      // Show the selected tab content
       document.getElementById(tabId).classList.add('active');
-
-      // Add active class to the clicked button
-      document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+      document.querySelector(`.tab-btn[onclick="showTab('${tabId}')"]`).classList.add('active');
     }
-
-    // Trigger animation on page load
     window.addEventListener('load', () => {
       document.body.classList.add('loaded');
     });
   </script>
 </body>
-                </html>
+            </html>
