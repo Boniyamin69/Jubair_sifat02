@@ -137,12 +137,12 @@
     }
     .tab-content .info-box {
       background: #2a2a2a;
-      padding: 10px;
+      padding: 16px;
       margin-bottom: 8px;
       border-left: 2px solid #ccc;
       border-radius: 4px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
     }
     .tab-content a {
       color: #00ffff;
@@ -152,10 +152,33 @@
       text-decoration: underline;
     }
     .logo-icon {
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
       vertical-align: middle;
+    }
+    .info-details {
+      display: flex;
+      flex-direction: column;
+    }
+    .info-details .title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .info-details .org {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 4px;
+    }
+    .info-details .date-location {
+      font-size: 0.9rem;
+      color: #bbb;
+      margin-bottom: 8px;
+    }
+    .info-details .description {
+      font-size: 0.9rem;
+      line-height: 1.4;
     }
     .animated-content {
       opacity: 0;
@@ -346,14 +369,85 @@
           <button class="tab-btn" onclick="showTab('languages')">Languages</button>
         </div>
         <div id="experience" class="tab-content active">
-          <div class="info-box"><img src="logo1.png" alt="Logo" class="logo-icon"> The Holy Quran Reciter, Zikrullah TV (USA), January 2024 - Present</div>
-          <div class="info-box"><img src="logo2.png" alt="Logo" class="logo-icon"> Child Islamic Singer, Obiram Shilpigosthi, Bogura, Bangladesh, 2014-2015</div>
-          <div class="info-box"><img src="logo3.png" alt="Logo" class="logo-icon"> Feature and Content Writer, Youth Organisations Bangladesh, Nov 2018 - Present, Sirajganj, Bangladesh</div>
-          <div class="info-box"><img src="logo4.png" alt="Logo" class="logo-icon"> Head of Cultural Member, Hikmah Alumni Association, Aug 2019 - Present, Uttara, Dhaka, Bangladesh</div>
-          <div class="info-box"><img src="logo5.png" alt="Logo" class="logo-icon"> Creative Nasheed Composer, Tanvir Khan Studio, Jan 2024 - Present, Dhaka, Bangladesh</div>
-          <div class="info-box"><img src="logo6.png" alt="Logo" class="logo-icon"> Senior Artist, Oishiswr Shilpigosthi, Jan 2017 - Present, Uttara, Dhaka, Bangladesh</div>
-          <div class="info-box"><img src="logo7.png" alt="Logo" class="logo-icon"> Lyricist and Melodist, Holy Tune & Kalarab, 2021 - Present, Paltan, Dhaka, Bangladesh</div>
-          <div class="info-box"><img src="logo8.png" alt="Logo" class="logo-icon"> Chief Executive & Founding Member, Melodians, Aug 2022 - Sep 2023, Dhaka, Bangladesh</div>
+          <div class="info-box">
+            <img src="logo1.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">The Holy Quran Reciter</div>
+              <div class="org">Zikrullah TV</div>
+              <div class="date-location">Jan 2024 - Present, United States of America</div>
+              <div class="description">For the past two years, I have been reciting the Holy Qur’an regularly on Zikrullah TV (USA). Alhamdulillah, my recitations have reached and touched the hearts of over 60 million viewers worldwide.</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo7.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Lyricist and Melodist</div>
+              <div class="org">Holy Tune</div>
+              <div class="date-location">Jun 2022 - Present, Dhaka, Bangladesh</div>
+              <div class="description">As a Lyricist and Melodist at Holy Tune, one of Bangladesh’s premier Islamic music organizations, I have had the privilege of composing and arranging numerous Nasheeds that resonate with listeners of all ages. My work has touched the hearts of over 20 million people, spreading the message of peace and spirituality.</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo_new1.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Head of Nasheed Writer</div>
+              <div class="org">Tune Hut</div>
+              <div class="date-location">Jan 2025 - Present, Dhaka, Bangladesh</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo_new2.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Head of Marketing & Artist</div>
+              <div class="org">Ts Records</div>
+              <div class="date-location">Jan 2024 - Present, Dhaka, Bangladesh</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo8.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Founding Member & Artist</div>
+              <div class="org">Melodians Band</div>
+              <div class="date-location">Jan 2022 - 2023, Dhaka, Bangladesh</div>
+              <div class="description">Founding member of Melodians Band, serving as lead lyricist, composer, and vocalist. Our soulful Nasheeds have touched countless hearts and built a deep spiritual connection with listeners.</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo4.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Chief Cultural Executive</div>
+              <div class="org">Hikmah Alumni Association</div>
+              <div class="date-location">Feb 2022 - Present, Dhaka, Bangladesh</div>
+              <div class="description">As Head of the Cultural Division at Hikmah Alumni Association, I promote Islamic culture and help students discover and grow their talents.</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo3.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Content & Feature Writer</div>
+              <div class="org">Youth Organisations</div>
+              <div class="date-location">May 2020 - Present, Sirajganj, Bangladesh</div>
+              <div class="description">I serve as a Content & Feature Writer at Youth Organisations Bangladesh, a dynamic platform that brings together over 30,000 young individuals. We are dedicated to empowering youth and shaping a better future for the next generation.</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo6.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Child & Youth Director</div>
+              <div class="org">Oishiswr Shilpigosthi</div>
+              <div class="date-location">July 2017 - 2022, Dhaka, Bangladesh</div>
+              <div class="description">As a Senior Artist at Oishiswr Shilpigosthi, I participated in cultural productions and mentored young performers. I’ve written and performed numerous Islamic Nasheeds, many aired on national TV, aiming to inspire hearts and promote Islamic values through art.</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo2.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Child Performer</div>
+              <div class="org">Obiram Shilpigosthi</div>
+              <div class="date-location">Feb 2014 - 2016, Bogura, Bangladesh</div>
+              <div class="description">I started my artistic journey with Obiram Shilpigosthi as a child performer, engaging audiences through cultural programs while sharing messages inspired by Islamic values.</div>
+            </div>
+          </div>
         </div>
         <div id="skills" class="tab-content">
           <div class="info-box">★ The Holy Quran Recitation</div>
@@ -368,10 +462,60 @@
           <div class="info-box">★ Video Editing</div>
         </div>
         <div id="education" class="tab-content">
-          <div class="info-box"><img src="logo11.png" alt="Logo" class="logo-icon"> Al Jamiatul Islamia Qasemul Ulum (Jamil Madrasha), Hafeez-e Quran, 2015-2016</div>
-          <div class="info-box"><img src="logo12.png" alt="Logo" class="logo-icon"> Darunnazat Siddikia Kamil Madrasah, HSC Level, 2021 - 2023, A+,</div>
-          <div class="info-box"><img src="logo13.png" alt="Logo" class="logo-icon"> Muradpur Islamia Fazil Madrasah, SSC Level, 2019 - 2021, 4.83 (Science),</div>
-          <div class="info-box"><img src="logo14.png" alt="Logo" class="logo-icon"> Madrasatul Hikmah Al Islamiah, JDC Level (Arabic Medium School)</div>
+          <div class="info-box">
+            <img src="logo_new3.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Islamic Arabic University</div>
+              <div class="org"></div>
+              <div class="date-location">2024 - Present, Dhaka, Bangladesh</div>
+              <div class="description">Bachelor of the Holy Quran</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo_new3.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Jamiah Arabia Qasemul Ulum</div>
+              <div class="org"></div>
+              <div class="date-location">2024 - 2025, Dhaka, Bangladesh</div>
+              <div class="description">Takmil fil Hadith</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo12.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Darunnazat Siddikia Kamil Madrasah</div>
+              <div class="org"></div>
+              <div class="date-location">2021 - 2023, Dhaka, Bangladesh</div>
+              <div class="description">HSC Level, A+</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo13.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Muradpur Islamia Fazil Madrasah</div>
+              <div class="org"></div>
+              <div class="date-location">2019 - 2021, Dhaka, Bangladesh</div>
+              <div class="description">SSC Level, 4.83 (Science)</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo11.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Al Jamiatul Islamia Qasemul Ulum (Jamil Madrasha)</div>
+              <div class="org"></div>
+              <div class="date-location">2015 - 2016, Dhaka, Bangladesh</div>
+              <div class="description">Hafeez-e Quran</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo14.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Madrasatul Hikmah Al Islamiah</div>
+              <div class="org"></div>
+              <div class="date-location">Dhaka, Bangladesh</div>
+              <div class="description">JDC Level (Arabic Medium School)</div>
+            </div>
+          </div>
         </div>
         <div id="publications" class="tab-content">
           <div class="info-box">★ Kabbomala</div>
@@ -383,11 +527,46 @@
           <div class="info-box">★ Srijone Priojon</div>
         </div>
         <div id="awards" class="tab-content">
-          <div class="info-box"><img src="logo15.png" alt="Logo" class="logo-icon"> 1st Champion, Quraner Alo Power by Priojon Multimedia, Finalist 2022</div>
-          <div class="info-box"><img src="logo16.png" alt="Logo" class="logo-icon"> 1st Runner-Up, Hand Writing, Sheikh Rasel Annual Competition, Issued: Dec 2012</div>
-          <div class="info-box"><img src="logo17.png" alt="Logo" class="logo-icon"> 2nd Runner-Up, Islamic Nasheed, Sheikh Rasel Annual Competition, Issued: Dec 2012</div>
-          <div class="info-box"><img src="logo18.png" alt="Logo" class="logo-icon"> Award of Renesa, Darunnazat Siddikia Kamil Madrasah (Powered by Chatro Hijbullah), 2023</div>
-          <div class="info-box"><img src="logo19.png" alt="Logo" class="logo-icon"> Best Singer Award, Madrasatul Hikmah Al Islamiah, Issued: Feb 2021</div>
+          <div class="info-box">
+            <img src="logo15.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">1st Champion</div>
+              <div class="org">Quraner Alo Power by Priojon Multimedia</div>
+              <div class="date-location">Finalist 2022</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo16.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">1st Runner-Up, Hand Writing</div>
+              <div class="org">Sheikh Rasel Annual Competition</div>
+              <div class="date-location">Issued: Dec 2012</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo17.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">2nd Runner-Up, Islamic Nasheed</div>
+              <div class="org">Sheikh Rasel Annual Competition</div>
+              <div class="date-location">Issued: Dec 2012</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo18.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Award of Renesa</div>
+              <div class="org">Darunnazat Siddikia Kamil Madrasah (Powered by Chatro Hijbullah)</div>
+              <div class="date-location">2023</div>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="logo19.png" alt="Logo" class="logo-icon">
+            <div class="info-details">
+              <div class="title">Best Singer Award</div>
+              <div class="org">Madrasatul Hikmah Al Islamiah</div>
+              <div class="date-location">Issued: Feb 2021</div>
+            </div>
+          </div>
         </div>
         <div id="languages" class="tab-content">
           <div class="info-box"><img src="logo20.png" alt="Logo" class="logo-icon"> Bangla</div>
@@ -492,4 +671,4 @@
     });
   </script>
 </body>
-  </html>
+            </html>
