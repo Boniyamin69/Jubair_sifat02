@@ -51,7 +51,6 @@
       background: #ff0000;
       transition: background 0.3s;
     }
- - (আগের স্টাইল)
     .btn-watch:hover {
       background: #cc0000;
     }
@@ -282,7 +281,6 @@
         width: 33.333%;
       }
     }
-    /* নতুন স্টাইল যোগ করা */
     .video-card h3 {
       font-family: 'Arial', sans-serif;
       font-size: 1.25rem;
@@ -294,6 +292,60 @@
     .video-card iframe {
       border-radius: 8px;
       border: 2px solid #444;
+    }
+    /* নতুন স্টাইল যোগ করা Follow সেকশনের জন্য */
+    .follow-section {
+      background: #1a1a1a;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 32px;
+    }
+    .follow-section h2 {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .follow-section h2 span {
+      width: 8px;
+      height: 32px;
+      background: #ff0000;
+      margin-right: 16px;
+    }
+    .follow-section .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .follow-section .social-links a {
+      display: inline-block;
+      background: #fff;
+      border-radius: 4px;
+      padding: 6px;
+      transition: transform 0.3s;
+    }
+    .follow-section .social-links a:hover {
+      transform: scale(1.1);
+    }
+    .follow-section .social-links img {
+      width: 24px;
+      height: 24px;
+    }
+    @media (max-width: 768px) {
+      .follow-section h2 {
+        font-size: 1.5rem;
+      }
+      .follow-section .social-links {
+        gap: 8px;
+      }
+      .follow-section .social-links a {
+        padding: 4px;
+      }
+      .follow-section .social-links img {
+        width: 20px;
+        height: 20px;
+      }
     }
   </style>
 </head>
@@ -588,6 +640,41 @@
         </div>
       </div>
     </div>
+    <!-- Follow সেকশন যোগ করা -->
+    <div class="container mx-auto mt-16 animated-content follow-section">
+      <h2 class="section-title">
+        <span></span>FOLLOW
+      </h2>
+      <div class="social-links">
+        <a href="https://www.facebook.com/share/1BZQsraQA5/?mibextid=wwXIfr" target="_blank" class="social-icon">
+          <img src="https://saadalamin.com/images/icons/social/Asset 2@4x.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/jubairsifat?igsh=bW5idWRoaXpqOTR2&utm_source=qr" target="_blank" class="social-icon">
+          <img src="https://saadalamin.com/images/icons/social/Asset 3@4x.png" alt="Instagram">
+        </a>
+        <a href="https://youtube.com/@jubairsifat?si=sbOWpI-5ZIQ431Q2" target="_blank" class="social-icon">
+          <img src="https://saadalamin.com/images/icons/social/Asset 6@4x.png" alt="YouTube">
+        </a>
+        <a href="https://www.amazon.com/Ramadan-Jubair-Sifat/dp/B0CBJ74B3S" target="_blank" class="social-icon">
+          <img src="https://saadalamin.com/images/icons/social/Asset 21@4x.png" alt="Amazon Music">
+        </a>
+        <a href="https://open.spotify.com/artist/5Mg0WayWBesUeH2CRhZ8Sp" target="_blank" class="social-icon">
+          <img src="https://saadalamin.com/images/icons/social/Asset 12@4x.png" alt="Spotify">
+        </a>
+        <a href="https://www.deezer.com/us/artist/163900397" target="_blank" class="social-icon">
+          <img src="https://saadalamin.com/images/icons/social/Asset 15@4x.png" alt="Deezer Music">
+        </a>
+        <a href="https://www.jiosaavn.com/artist/jubair-sifat-songs/ie9WhXQuGBk_" target="_blank" class="social-icon">
+          <img src="https://saadalamin.com/images/icons/social/Asset 13@4x.png" alt="JioSaavn">
+        </a>
+        <a href="https://music.apple.com/au/artist/jubair-sifat/1691458087" target="_blank" class="social-icon">
+          <img src="https://saadalamin.com/images/icons/social/Asset 20@4x.png" alt="Apple Music">
+        </a>
+        <a href="https://audiomack.com/jubair-sifat/album/muhammad" target="_blank" class="social-icon">
+          <img src="https://saadalamin.com/images/icons/social/Asset 14@4x.png" alt="Audiomack">
+        </a>
+      </div>
+    </div>
     <footer class="animated-content">
       <div class="container mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-center">
@@ -601,29 +688,7 @@
             <a href="works.html">Works</a>
             <a href="contents.html">Contents</a>
           </div>
-          <div class="flex space-x-4">
-            <a href="https://youtube.com/@jubairsifatofficial137" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.615 3.184c-1.854-.195-3.615-.37-5.615-.37s-3.761.175-5.615.37c-1.854.195-3.385 1.726-3.615 3.615-.23 1.89-.346 3.77-.346 5.615s.116 3.725.346 5.615c.23 1.89 1.761 3.42 3.615 3.615 1.854.195 3.615.37 5.615.37s3.761-.175 5.615-.37c1.854-.195 3.385-1.726 3.615-3.615.23-1.89.346-3.77.346-5.615s-.116-3.725-.346-5.615c-.23-1.89-1.761-3.42-3.615-3.615zm-7.615 14.816v-9.232l6 4.616-6 4.616z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/hmshefat.sarker?mibextid=ZbWKwL" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-2.596 0-4.192 1.583-4.192 4.615v3.385z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/jubairsifatoishiswr?mibextid=ZbWKwL" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-2.596 0-4.192 1.583-4.192 4.615v3.385z"/></svg>
-            </a>
-            <a href="https://instagram.com/jubairsifat?igshid=NzZlODBkYWE4Ng==" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c-3.204 0-3.584.012-4.85.07-1.366.062-2.633.326-3.608 1.301-.975.975-1.24 2.242-1.301 3.608-.058 1.266-.07 1.646-.07 4.85s.012 3.584.07 4.85c.062 1.366.326 2.633 1.301 3.608.975.975 2.242 1.24 3.608 1.301 1.266.058 1.646.07 4.85.07s3.584-.012 4.85-.07c1.366-.062 2.633-.326 3.608-1.301.975-.975 1.24-2.242 1.301-3.608.058-1.266.07-1.646.07-4.85s-.012-3.584-.07-4.85c-.062-1.366-.326-2.633-1.301-3.608-.975-.975-2.242-1.24-3.608-1.301-1.266-.058-1.646-.07-4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.405.064-2.813.363-3.986 1.536-1.173 1.173-1.472 2.581-1.536 3.986-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.064 1.405.363 2.813 1.536 3.986 1.173 1.173 2.581 1.472 3.986 1.536 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.405-.064 2.813-.363 3.986-1.536 1.173-1.173 1.472-2.581 1.536-3.986.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.064-1.405-.363-2.813-1.536-3.986-1.173-1.173-2.581-1.472-3.986-1.536-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.687 6-6-2.687-6-6-6zm0 9.75c-2.071 0-3.75-1.679-3.75-3.75s1.679-3.75 3.75-3.75 3.75 1.679 3.75 3.75-1.679 3.75-3.75 3.75zm4.875-8.625c-.483 0-.875-.392-.875-.875s.392-.875.875-.875.875.392.875.875-.392.875-.875.875z"/></svg>
-            </a>
-            <a href="https://spotify.link/D4FV2OQpRDb" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.156 15.156c-1.05 1.05-2.475 1.638-3.975 1.638-1.5 0-2.925-.588-3.975-1.638-1.05-1.05-1.638-2.475-1.638-3.975 0-1.5.588-2.925 1.638-3.975 1.05-1.05 2.475-1.638 3.975-1.638 1.5 0 2.925.588 3.975 1.638 1.05 1.05 1.638 2.475 1.638 3.975 0 1.5-.588 2.925-1.638 3.975zM12 4.8c-2.025 0-3.9 1.05-4.95 2.7-.3.375-.6.825-.825 1.275-.225.45-.375.975-.45 1.5 0 .525.15 1.05.45 1.5.225.45.525.9.825 1.275.3.375.675.75 1.05 1.05.375.3.825.525 1.275.675.45.15.975.225 1.5.225.525 0 1.05-.075 1.5-.225.45-.15.825-.375 1.2-.675.375-.3.75-.675 1.05-1.05.3-.375.525-.825.675-1.275.15-.45.225-.975.225-1.5 0-.525-.075-1.05-.225-1.5-.15-.45-.375-.825-.675-1.2-.3-.375-.675-.75-1.05-1.05-.375-.3-.825-.525-1.275-.675-.45-.15-.975-.225-1.5-.225z"/></svg>
-            </a>
-            <a href="https://amazon.co.uk/music/player/artists/B09VX64JBT/jubair-sifat?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_RvBraFOSnpInfgCBtImSnOmZZ" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.9 2.7c-.6-.6-1.5-.7-2.2-.2l-11 7.2c-.7.4-1.1 1.2-1 2.1.1.9.7 1.6 1.5 1.8l3.4 1v4.3c0 1.1.5 2.2 1.4 2.9.9.7 2.1.7 3 0 .9-.7 1.4-1.8 1.4-2.9v-4.5l3.4-1c.8-.2 1.4-.9 1.5-1.8.1-.9-.3-1.7-1-2.1l-1.1-.7zM12 19.5c-.3.2-.7.2-1 0-.3-.2-.5-.6-.5-1v-4.2l3.5 1v3.2c0 .4-.2.8-.5 1zM19.5 9.5l-7.5 4.5-7.5-4.5 6.8-4.4c.3-.2.7-.2 1 0l6.2 4.4z"/></svg>
-            </a>
-            <a href="https://www.boomplay.com/lyrics/133328411" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 10v-2c0-1.104.896-2 2-2s2 .896 2 2v2h-4zm4 4h-4v2c0 1.104.896 2 2 2s2-.896 2-2v-2z"/></svg>
-            </a>
-          </div>
+          <!-- ফুটার থেকে সোশ্যাল লিংক রিমুভ করা -->
         </div>
         <div class="text-center mt-6 text-sm">
           <p>© 2025 Jubair Sifat. All Rights Reserved. Developed by <a href="https://www.facebook.com/Yamin699" target="_blank">Boni Yamin</a>.</p>
@@ -683,4 +748,4 @@
     });
   </script>
 </body>
-</html>
+            </html>
