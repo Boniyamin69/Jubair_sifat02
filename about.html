@@ -1,49 +1,11 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jubair Sifat - About</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
     body {
       background-image: url('background.jpg');
@@ -198,7 +160,7 @@
                   
                   His songs inspire and entertain all classes of people and send a message of peace and hope to the mass community. In "YouTube" Jubair Sifat is very famous for his Islamic meaningful lyrics. He is also renowned in social media platforms. But he is popular in Modern society as a successful lyricist. A number of nasheeds written and composed by him reached the peak of popularity. And this unique tune has reached the remote areas of Bangladesh. So far he has written more than 150+ Islamic songs and 500+ poems. Moreover, 
                   
-                  about a hundred songs have been released on various social media. He is currently associated with various cultural platforms including the biggest Islamic production houses in Bangladesh, such as Holy Tune, Haven Tune, Tarana, and other plaplatforms
+                  about a hundred songs have been released on various social media. He is currently associated with various cultural platforms including the biggest Islamic production houses in Bangladesh, such as Holy Tune, Haven Tune, Tarana, and other platforms
       </p>
         </div>
         <div class="md:w-1/3 mt-6 md:mt-0">
@@ -219,24 +181,49 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div class="thought-card">
+            <img src="person13.jpg" alt="Allama Muhib Khan" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <p>"The publication of “Kabyomala” in 2020 was a memorable moment, as it included some of my own poetry as well. Among them, I was deeply moved by the poems written by my younger brother, Jubair Sifat. As a Hafiz of the Qur’an, his writings reflect a deep sense of faith, heartfelt emotion, and remarkable linguistic beauty. Even at a young age, his mature thoughts and creative expression have marked him as a promising poet and artist. I pray that Allah allows him to use this divine gift to bring benefit to both society and the Ummah."</p>
+            <p class="text-xs font-bold text-right mt-2">- Allama Muhib Khan</p>
+          </div>
+          <div class="thought-card">
             <img src="person1.jpg" alt="Muhammad Badruzzaman" class="w-16 h-16 rounded-full mx-auto mb-4">
             <p>"My younger brother Jubair Sifat is not only a pride of our family, but also a true inspiration for today’s youth. His recitation of the Qur’an and Islamic nasheeds touch the heart in a deeply spiritual way. From a young age, he has shown dedication to the path of Islam. As a Qari and nasheed artist, he has earned recognition, but what I admire even more is his humility, gentle manners, and noble character. As his elder brother, I am always proud of him. I sincerely pray that Allah increases him in knowledge, action, and service to the Ummah. May he continue to call people to Allah through his voice, and spread the beauty of Islam across the world—this is my heartfelt hope and prayer for him."</p>
             <p class="text-xs font-bold text-right mt-2">- Muhammad Badruzzaman</p>
           </div>
           <div class="thought-card">
-            <img src="person2.jpg" alt="Abu Raihan" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <img src="person2.jpg" alt="Abu Rayhan" class="w-16 h-16 rounded-full mx-auto mb-4">
             <p>"I am Abu Raihan. Jubair Sifat is that brother whose voice brings tears to my eyes and peace to my heart when he recites the words of Allah. He is not just a Qari or a nasheed artist—he is a soul gifted by Allah with a special light. His melody, his expression, his sincerity—together they create a name that stands out on its own. I love him not only as a brother, but as a God-conscious man who has dedicated his voice to calling others toward Allah. My heartfelt prayer is that Allah blesses his voice with even more barakah, strengthens his sincerity, and elevates him to such heights that his light can illuminate the hearts of millions around the world."</p>
             <p class="text-xs font-bold text-right mt-2">- Abu Rayhan</p>
-          </div>
-          <div class="thought-card">
-            <img src="person3.jpg" alt="Tanver Khan" class="w-16 h-16 rounded-full mx-auto mb-4">
-            <p>"In life, I’ve been blessed with many things, but having Jubair Sifat as my brother is one of the greatest gifts Allah has given me. When I listen to his Qur’an recitation or his deeply emotional nasheeds, I feel like divine mercy has descended upon our home. He is not just an artist—he is a caller to Allah, a reminder of faith, and a light in many people’s lives. I’m proud of him for touching so many hearts, and I’m grateful because his life is a lesson for mine as well. As his brother, I sincerely pray that Allah accepts his efforts, increases him in sincerity and reward, and honors him both in this world and the hereafter."</p>
-            <p class="text-xs font-bold text-right mt-2">- Tanvir Khan</p>
           </div>
           <div class="thought-card">
             <img src="person4.jpg" alt="Munayem Billah" class="w-16 h-16 rounded-full mx-auto mb-4">
             <p>"Jubair Sifat is an exceptional lyricist, composer, and artist who doesn’t just write words—he crafts emotions. I’ve had the honor of singing three of his Nasheeds, and by the grace of Allah, they went viral and touched many hearts. Each of his lyrics carries a depth that speaks directly to the soul. My love, respect, and heartfelt gratitude go out to Jubair Sifat. It’s truly a blessing for me to have given voice to his beautiful creations. I sincerely pray that Allah grants him more barakah in his efforts for the Deen and allows his contributions to Islamic music to reach every corner of the world."</p>
             <p class="text-xs font-bold text-right mt-2">- Munaem Billah</p>
+          </div>
+          <div class="thought-card">
+            <img src="person14.jpg" alt="Abu Ubayda" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <p>"Jubair Sifat is my beloved younger brother—an exceptionally gifted writer, composer, and vocal artist. His voice brings tranquility to the heart, his words reflect deep thought, and his melodies touch the soul. Particularly in Arabic Nasheeds, his voice adds a unique vitality—his pronunciation, emotion, and tone elevate the beauty of the Arabic language and melody. I have had the opportunity to work with him on several Arabic Nasheed projects. It was a truly inspiring experience. His professionalism, sincerity, and dedication to his craft left a lasting impression on me. I sincerely pray for him—may Allah accept his talents and grant him the ability to rise even higher in the realm of Islamic art and spiritual culture."</p>
+            <p class="text-xs font-bold text-right mt-2">- Abu Ubayda</p>
+          </div>
+          <div class="thought-card">
+            <img src="person3.jpg" alt="Tanvir Khan" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <p>"In life, I’ve been blessed with many things, but having Jubair Sifat as my brother is one of the greatest gifts Allah has given me. When I listen to his Qur’an recitation or his deeply emotional nasheeds, I feel like divine mercy has descended upon our home. He is not just an artist—he is a caller to Allah, a reminder of faith, and a light in many people’s lives. I’m proud of him for touching so many hearts, and I’m grateful because his life is a lesson for mine as well. As his brother, I sincerely pray that Allah accepts his efforts, increases him in sincerity and reward, and honors him both in this world and the hereafter."</p>
+            <p class="text-xs font-bold text-right mt-2">- Tanvir Khan</p>
+          </div>
+          <div class="thought-card">
+            <img src="person15.jpg" alt="Tawhid Jamil" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <p>"Jubair Sifat is a dear younger brother to me. In him, I see a rare light of talent—one that is not only heard through words, but deeply felt in the heart. As a Hafiz of the Qur’an, a poet, and an artist, his every work reflects sincerity, depth, and creativity. His voice, especially in Arabic Nasheeds, carries a unique calmness that touches the soul. There is a maturity and honesty in his writing, melody, and voice that is truly remarkable for someone his age. I wholeheartedly believe that he has a bright future ahead. In shaa Allah, he will go a long way—and my heartfelt prayers and support will always be with him."</p>
+            <p class="text-xs font-bold text-right mt-2">- Tawhid Jamil</p>
+          </div>
+          <div class="thought-card">
+            <img src="person16.jpg" alt="Yeasin Hayder" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <p>"Jubair Sifat is a dear younger brother to me. In him, I see a rare light of talent—one that is not only heard through words, but deeply felt in the heart. As a Hafiz of the Qur’an, a poet, and an artist, his every work reflects sincerity, depth, and creativity. His voice, especially in Arabic Nasheeds, carries a unique calmness that touches the soul. There is a maturity and honesty in his writing, melody, and voice that is truly remarkable for someone his age. I wholeheartedly believe that he has a bright future ahead. In shaa Allah, he will go a long way—and my heartfelt prayers and support will always be with him."</p>
+            <p class="text-xs font-bold text-right mt-2">- Yeasin Hayder</p>
+          </div>
+          <div class="thought-card">
+            <img src="person8.jpg" alt="Abdul Kadir Hawlader" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <p>"আমার চোখে \"যুবায়ের সিফাত\" দাদুভাই শুধু একজন প্রথিতযশা গীতিকার বা ভাবুক কোন তরুণ নয়, আমার তৃতীয় নয়ণে দেখা মহাকাশে অনাবিষ্কৃত এক উজ্জ্বল নক্ষত্র। লেখক ও গবেষক - যার লিখনীতে প্রাণ প্রিয় নবীজি সাঃ এর প্রতি অগাধ নিখাঁদ ভালোবাসার প্রতিধ্বনি যেন শুনতে পাই - যার মুখাবয়বে সেই খোরাসানের কালো পতাকাবাহীদেরই একজনকে অনুভব করি - যার কথার মাধুর্য এক শিল্পকর্ম। আমি দাদুকে অনেকের কাছ থেকে আলাদা মনে করি এ-ই জন্য যে - মেধা মননে দাদু আমার নিকট অন্যতম। আমি অন্তরের অন্তস্থল থেকে দাদুর প্রতি প্রীতি ও দু'য়া এবং সফলতা কামনা করছি আমিও দাদুর কাছে আমার সুস্থতার জন্য দু'য়া + ভালোবাসা চেয়ে নিচ্ছি"</p>
+            <p class="text-xs font-bold text-right mt-2">- আব্দুল কাদির হাওলাদার</p>
           </div>
           <div class="thought-card">
             <img src="person5.jpg" alt="Salahuddin Sakib" class="w-16 h-16 rounded-full mx-auto mb-4">
@@ -254,9 +241,9 @@
             <p class="text-xs font-bold text-right mt-2">- Husain Huzaifa</p>
           </div>
           <div class="thought-card">
-            <img src="person8.jpg" alt="Abdul Kadir Hawlader" class="w-16 h-16 rounded-full mx-auto mb-4">
-            <p>"আমার চোখে \"যুবায়ের সিফাত\" দাদুভাই শুধু একজন প্রথিতযশা গীতিকার বা ভাবুক কোন তরুণ নয়, আমার তৃতীয় নয়ণে দেখা মহাকাশে অনাবিষ্কৃত এক উজ্জ্বল নক্ষত্র। লেখক ও গবেষক - যার লিখনীতে প্রাণ প্রিয় নবীজি সাঃ এর প্রতি অগাধ নিখাঁদ ভালোবাসার প্রতিধ্বনি যেন শুনতে পাই - যার মুখাবয়বে সেই খোরাসানের কালো পতাকাবাহীদেরই একজনকে অনুভব করি - যার কথার মাধুর্য এক শিল্পকর্ম। আমি দাদুকে অনেকের কাছ থেকে আলাদা মনে করি এ-ই জন্য যে - মেধা মননে দাদু আমার নিকট অন্যতম। আমি অন্তরের অন্তস্থল থেকে দাদুর প্রতি প্রীতি ও দু'য়া এবং সফলতা কামনা করছি আমিও দাদুর কাছে আমার সুস্থতার জন্য দু'য়া + ভালোবাসা চেয়ে নিচ্ছি"</p>
-            <p class="text-xs font-bold text-right mt-2">- আব্দুল কাদির হাওলাদার</p>
+            <img src="person10.jpg" alt="Ismail Afeef" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <p>"I’ve had the privilege of working with Jubair Sifat multiple times, and each collaboration has been a truly inspiring experience. He is not just a talented artist, but a deeply thoughtful individual whose dedication to his work and Islamic principles stands out in every project. His voice carries both emotion and purpose, and his creations always reflect sincerity and spiritual depth. Jubair Bhai is punctual, hardworking, and respectful to everyone in the team—qualities that make him not only a great artist but also a wonderful human being. It has truly been an honor and a joy to work alongside him."</p>
+            <p class="text-xs font-bold text-right mt-2">- Ismail Afeef</p>
           </div>
           <div class="thought-card">
             <img src="person9.jpg" alt="Omor Bin Yasin" class="w-16 h-16 rounded-full mx-auto mb-4">
@@ -264,19 +251,14 @@
             <p class="text-xs font-bold text-right mt-2">- Omor Bin Yasin</p>
           </div>
           <div class="thought-card">
-            <img src="person10.jpg" alt="Tarek Jamil" class="w-16 h-16 rounded-full mx-auto mb-4">
-            <p>"Jubair Sifat is a good person, and he recites beautiful Islamic nasheeds. He is also a renowned lyricist and a well-known Qari in Bangladesh. His Qur'an recitations are very popular, and he recites with deep emotion and feeling."</p>
-            <p class="text-xs font-bold text-right mt-2">- Tarek Jamil</p>
-          </div>
-          <div class="thought-card">
-            <img src="person11.jpg" alt="Ismail Afeef" class="w-16 h-16 rounded-full mx-auto mb-4">
-            <p>"I’ve had the privilege of working with Jubair Sifat multiple times, and each collaboration has been a truly inspiring experience. He is not just a talented artist, but a deeply thoughtful individual whose dedication to his work and Islamic principles stands out in every project. His voice carries both emotion and purpose, and his creations always reflect sincerity and spiritual depth. Jubair Bhai is punctual, hardworking, and respectful to everyone in the team—qualities that make him not only a great artist but also a wonderful human being. It has truly been an honor and a joy to work alongside him."</p>
-            <p class="text-xs font-bold text-right mt-2">- Ismail Afeef</p>
-          </div>
-          <div class="thought-card">
             <img src="person12.jpg" alt="Abdullah Sadik" class="w-16 h-16 rounded-full mx-auto mb-4">
             <p>"My dear friend Jubair Sifat is an incredibly gifted individual. He not only writes and composes his own works but also delivers them with a voice full of soul and sincerity. One of the most remarkable aspects of his artistry is his Qur’an recitation — his Tilawah touches the heart and brings a deep sense of peace to the soul. Listening to him feels like a spiritual journey; his tone, clarity, and emotional depth create an atmosphere of serenity and reflection. Jubair is not only talented but also deeply connected to the essence of his work, and that makes everything he does truly impactful. I feel blessed to call him my friend."</p>
             <p class="text-xs font-bold text-right mt-2">- Abdullah Sadik</p>
+          </div>
+          <div class="thought-card">
+            <img src="person11.jpg" alt="Tarek Jamil" class="w-16 h-16 rounded-full mx-auto mb-4">
+            <p>"Jubair Sifat is a good person, and he recites beautiful Islamic nasheeds. He is also a renowned lyricist and a well-known Qari in Bangladesh. His Qur'an recitations are very popular, and he recites with deep emotion and feeling."</p>
+            <p class="text-xs font-bold text-right mt-2">- Tarek Jamil</p>
           </div>
         </div>
       </div>
@@ -295,29 +277,6 @@
             <a href="about.html">About</a>
             <a href="works.html">Works</a>
             <a href="contents.html">Contents</a>
-          </div>
-          <div class="flex space-x-4">
-            <a href="https://youtube.com/@jubairsifatofficial137" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.615 3.184c-1.854-.195-3.615-.37-5.615-.37s-3.761.175-5.615.37c-1.854.195-3.385 1.726-3.615 3.615-.23 1.89-.346 3.77-.346 5.615s.116 3.725.346 5.615c.23 1.89 1.761 3.42 3.615 3.615 1.854.195 3.615.37 5.615.37s3.761-.175 5.615-.37c1.854-.195 3.385-1.726 3.615-3.615.23-1.89.346-3.77.346-5.615s-.116-3.725-.346-5.615c-.23-1.89-1.761-3.42-3.615-3.615zm-7.615 14.816v-9.232l6 4.616-6 4.616z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/hmshefat.sarker?mibextid=ZbWKwL" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-2.596 0-4.192 1.583-4.192 4.615v3.385z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/jubairsifatoishiswr?mibextid=ZbWKwL" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-2.596 0-4.192 1.583-4.192 4.615v3.385z"/></svg>
-            </a>
-            <a href="https://instagram.com/jubairsifat?igshid=NzZlODBkYWE4Ng==" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c-3.204 0-3.584.012-4.85.07-1.366.062-2.633.326-3.608 1.301-.975.975-1.24 2.242-1.301 3.608-.058 1.266-.07 1.646-.07 4.85s.012 3.584.07 4.85c.062 1.366.326 2.633 1.301 3.608.975.975 2.242 1.24 3.608 1.301 1.266.058 1.646.07 4.85.07s3.584-.012 4.85-.07c1.366-.062 2.633-.326 3.608-1.301.975-.975 1.24-2.242 1.301-3.608.058-1.266.07-1.646.07-4.85s-.012-3.584-.07-4.85c-.062-1.366-.326-2.633-1.301-3.608-.975-.975-2.242-1.24-3.608-1.301-1.266-.058-1.646-.07-4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.405.064-2.813.363-3.986 1.536-1.173 1.173-1.472 2.581-1.536 3.986-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.064 1.405.363 2.813 1.536 3.986 1.173 1.173 2.581 1.472 3.986 1.536 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.405-.064 2.813-.363 3.986-1.536 1.173-1.173 1.472-2.581 1.536-3.986.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.064-1.405-.363-2.813-1.536-3.986-1.173-1.173-2.581-1.472-3.986-1.536-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.687 6-6-2.687-6-6-6zm0 9.75c-2.071 0-3.75-1.679-3.75-3.75s1.679-3.75 3.75-3.75 3.75 1.679 3.75 3.75-1.679 3.75-3.75 3.75zm4.875-8.625c-.483 0-.875-.392-.875-.875s.392-.875.875-.875.875.392.875.875-.392.875-.875.875z"/></svg>
-            </a>
-            <a href="https://spotify.link/D4FV2OQpRDb" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.156 15.156c-1.05 1.05-2.475 1.638-3.975 1.638-1.5 0-2.925-.588-3.975-1.638-1.05-1.05-1.638-2.475-1.638-3.975 0-1.5.588-2.925 1.638-3.975 1.05-1.05 2.475-1.638 3.975-1.638 1.5 0 2.925.588 3.975 1.638 1.05 1.05 1.638 2.475 1.638 3.975 0 1.5-.588 2.925-1.638 3.975zM12 4.8c-2.025 0-3.9 1.05-4.95 2.7-.3.375-.6.825-.825 1.275-.225.45-.375.975-.45 1.5 0 .525.15 1.05.45 1.5.225.45.525.9.825 1.275.3.375.675.75 1.05 1.05.375.3.825.525 1.275.675.45.15.975.225 1.5.225.525 0 1.05-.075 1.5-.225.45-.15.825-.375 1.2-.675.375-.3.75-.675 1.05-1.05.3-.375.525-.825.675-1.275.15-.45.225-.975.225-1.5 0-.525-.075-1.05-.225-1.5-.15-.45-.375-.825-.675-1.2-.3-.375-.675-.75-1.05-1.05-.375-.3-.825-.525-1.275-.675-.45-.15-.975-.225-1.5-.225z"/></svg>
-            </a>
-            <a href="https://amazon.co.uk/music/player/artists/B09VX64JBT/jubair-sifat?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_RvBraFOSnpInfgCBtImSnOmZZ" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.9 2.7c-.6-.6-1.5-.7-2.2-.2l-11 7.2c-.7.4-1.1 1.2-1 2.1.1.9.7 1.6 1.5 1.8l3.4 1v4.3c0 1.1.5 2.2 1.4 2.9.9.7 2.1.7 3 0 .9-.7 1.4-1.8 1.4-2.9v-4.5l3.4-1c.8-.2 1.4-.9 1.5-1.8.1-.9-.3-1.7-1-2.1l-1.1-.7zM12 19.5c-.3.2-.7.2-1 0-.3-.2-.5-.6-.5-1v-4.2l3.5 1v3.2c0 .4-.2.8-.5 1zM19.5 9.5l-7.5 4.5-7.5-4.5 6.8-4.4c.3-.2.7-.2 1 0l6.2 4.4z"/></svg>
-            </a>
-            <a href="https://www.boomplay.com/lyrics/133328411" target="_blank" class="social-icon">
-              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10-4.486-10-10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 10v-2c0-1.104.896-2 2-2s2 .896 2 2v2h-4zm4 4h-4v2c0 1.104.896 2 2 2s2-.896 2-2v-2z"/></svg>
-            </a>
           </div>
         </div>
         <div class="text-center mt-6 text-sm">
